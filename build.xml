@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="deploy" name="project">
     <!-- －－－－－－－－－         要修改的      START －－－－－－－－－-->
-    <property name="projectName" value="spring3" />
+    <property name="projectName" value="gwriter" />
     <!-- tomcat目录 -->
     <property name="tomcat.home" value="E:/apache-tomcat-6.0.16" />
     <!-- webapp路径 -->
@@ -60,7 +60,7 @@
             <fileset dir="${src.dir}">
                 <include name="**/*.xml" />
                 <include name="**/*.properties" />
-                <include name="**/*.sql" />
+            	<!--<include name="**/*.sql" /> -->
             </fileset>
         	<!--
             <fileset dir="${config.dir}">
@@ -74,7 +74,7 @@
       
     <!-- 打成war包, 名称默认为 项目名 -->
     <target name="war" depends="build" description="打成war包">
-    <echo message="4、打成war包" />
+    	<echo message="4、打成war包" />
         <war warfile="${dist.dir}/${projectName}.war" webxml="${webapp.dir}/WEB-INF/web.xml">
             <fileset dir="${webapp.dir}"/> 
         </war>
