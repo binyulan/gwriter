@@ -1,12 +1,12 @@
-package com.mystory;
+package com.gwriter;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mystory.dao.ArticleHibernateDAO;
-import com.mystory.domain.Article;
+import com.gwriter.dao.ArticleHibernateDAO;
+import com.gwriter.domain.Article;
 
 @Service
 public class ArticleService {

@@ -1,4 +1,4 @@
-package com.mystory.domain;
+package com.gwriter.domain;
 
 public class User {
 	

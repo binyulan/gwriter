@@ -1,8 +1,8 @@
-package com.mystory.dao;
+package com.gwriter.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.mystory.domain.User;
+import com.gwriter.domain.User;
 
 @Repository
 public class UserHibernateDAO extends BaseDao<User> {

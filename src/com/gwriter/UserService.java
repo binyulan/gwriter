@@ -1,10 +1,10 @@
-package com.mystory;
+package com.gwriter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mystory.dao.UserHibernateDAO;
-import com.mystory.domain.User;
+import com.gwriter.dao.UserHibernateDAO;
+import com.gwriter.domain.User;
 
 @Service
 public class UserService {

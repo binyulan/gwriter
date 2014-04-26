@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
 		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-lazy="false">
-	<class name="com.mystory.domain.User" table="user">
+	<class name="com.gwriter.domain.User" table="user">
 		<id name="id" column="id">
 			<generator class="native" />
 		</id>

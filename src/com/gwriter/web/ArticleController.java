@@ -1,12 +1,12 @@
-package com.mystory.web;
+package com.gwriter.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mystory.ArticleService;
-import com.mystory.domain.Article;
+import com.gwriter.ArticleService;
+import com.gwriter.domain.Article;
 
 @Controller
 @RequestMapping("/article")

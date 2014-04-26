@@ -13,10 +13,10 @@
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-    <context:component-scan base-package="com.mystory">
-       <context:exclude-filter type="aspectj" expression="com.mystory..web.*"/>
+    <context:component-scan base-package="com.gwriter">
+       <context:exclude-filter type="aspectj" expression="com.gwriter..web.*"/>
     </context:component-scan>
-    <context:component-scan base-package="com.mystory.dao.hibernate"/>
+    <context:component-scan base-package="com.gwriter.dao"/>
     <context:property-placeholder location="classpath:jdbc.properties" />
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close"
@@ -28,7 +28,7 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
 		p:dataSource-ref="dataSource"
-		p:mappingDirectoryLocations="classpath:/com/mystory/domain">
+		p:mappingDirectoryLocations="classpath:/com/gwriter/domain">
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
