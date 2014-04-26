@@ -1,4 +1,8 @@
-package com.gwriter.domain;
+package com.gwriter.domain.article;
+
+import java.util.HashSet;
+import java.util.Set;
+
 
 public class Article {
 	private int id;
@@ -6,6 +10,16 @@ public class Article {
 	private String title;
 	
 	private String body;
+	
+	private Set<Comment> comments;
+	
+	public Set<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(Set<Comment> comments) {
+		this.comments = comments;
+	}
 
 	public int getId() {
 		return id;

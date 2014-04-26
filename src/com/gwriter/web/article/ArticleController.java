@@ -1,12 +1,22 @@
-package com.gwriter.web;
+package com.gwriter.web.article;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.gwriter.ArticleService;
-import com.gwriter.domain.Article;
+import com.gwriter.domain.article.Article;
+import com.gwriter.domain.article.Comment;
+import com.gwriter.service.article.ArticleService;
 
 @Controller
 @RequestMapping("/article")
@@ -40,5 +50,14 @@ public class ArticleController {
 	public String addArticle(Article article){
 		articleService.saveArticle(article);
 		return "redirect:/article/article_list.do";
+	}
+	
+	@RequestMapping("/add_comment")
+	public void addCommentView(Comment comment, HttpServletResponse response) throws IOException{
+		articleService.saveComment(comment);
+		PrintWriter out = response.getWriter();          
+        String s = "success";
+        out.print(s);  
+        out.close();  
 	}
 }

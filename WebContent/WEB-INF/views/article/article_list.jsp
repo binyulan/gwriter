@@ -18,13 +18,12 @@
 </head>
 <body style="margin: 0; padding: 0">
 	<div style="height: 24px; width: 100%; background-color: #336699; border: 1px solid #336699"></div>
-	<div style="top: 30px; position: absolute;">
+	<div>
 	 	<div> java文章列表</div>
 		<c:forEach items="${articles }" var="article">
 			<a href='<c:url value="/article/view_article.do?id=${article.id }"/>'>${article.title }<br/></a>
 		</c:forEach>
 	</div>
-	
 </body>
 <script type="text/javascript">
 	SyntaxHighlighter.all();
