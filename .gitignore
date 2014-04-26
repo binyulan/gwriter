@@ -4,6 +4,8 @@
 .project
 META-INF
 classes
+disk
+lib
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
