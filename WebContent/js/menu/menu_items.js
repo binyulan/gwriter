@@ -7,7 +7,8 @@ var MENU_ITEMS = [
 	['java', null, null, 
 	 ['java基础',"article_list.do"],
 	 ['框架',"article_list.do"],
-	 ['设计模式',"article_list.do"]
+	 ['设计模式',"article_list.do"],
+	 ['常用算法',"article_list.do"]
 	],
 	['javascript', null, null, 
 	 ['javascript基础',"article_list.do"],
