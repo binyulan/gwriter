@@ -22,9 +22,9 @@
 		<div class="inner">
 			<div class="logo">
 				<h1>
-					<a title="返回首页" href="http://www.youxiuboke.com">优秀博客</a>
+					<a title="返回首页" href="http://www.gwriter.cn">gwriter</a>
 				</h1>
-				<h2>我的博客收藏夹</h2>
+				<h2>MY BLOB</h2>
 			</div>
 			<div id="search">
 				<form class="form-search" method="get" name="search-form"
