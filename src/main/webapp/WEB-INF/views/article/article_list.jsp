@@ -4,16 +4,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<script type="text/javascript"  src="../js/ckeditor/ckeditor.js"></script>
-<script type="text/javascript"  src="../js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script type="text/javascript"  src="../js/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
-<script type="text/javascript"  src="../js/menu/menu.js"></script>
-<script type="text/javascript"  src="../js/menu/menu_items.js"></script>
-<script type="text/javascript"  src="../js/menu/menu_tpl.js"></script>
-<link href="../js/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
-<link href="../js/syntaxhighlighter_3.0.83/styles/shCoreEmacs.css" rel="stylesheet" type="text/css" />
-<link href="../js/menu/menu.css" rel="stylesheet" type="text/css" />
-<link href="../css/header/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"  src="<c:url value="/"/>js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript"  src="<c:url value="/"/>js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript"  src="<c:url value="/"/>js/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
+<script type="text/javascript"  src="<c:url value="/"/>js/menu/menu.js"></script>
+<script type="text/javascript"  src="<c:url value="/"/>js/menu/menu_items.js"></script>
+<script type="text/javascript"  src="<c:url value="/"/>js/menu/menu_tpl.js"></script>
+<link href="<c:url value="/"/>js/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="<c:url value="/"/>js/syntaxhighlighter_3.0.83/styles/shCoreEmacs.css" rel="stylesheet" type="text/css" />
+<link href="<c:url value="/"/>js/menu/menu.css" rel="stylesheet" type="text/css" />
+<link href="<c:url value="/"/>css/header/style.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>文章列表</title>
 </head>
