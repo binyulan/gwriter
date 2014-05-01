@@ -16,7 +16,8 @@ var MENU_ITEMS = [
 	],
 	['工具使用', null, null, 
 	 ['eclipse',"article_list.do"],
-	 ['editplus',"article_list.do"]
+	 ['editplus',"article_list.do"],
+	 ['acdsee',"article_list.do"]
 	],
 ];
 

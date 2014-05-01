@@ -38,11 +38,25 @@
 		</div>
 	</div>
 	<div style="height: 24px; width: 100%; background-color: #336699; border: 1px solid #336699"></div>
-	<div>
-	 	<div> java文章列表</div>
-		<c:forEach items="${articles }" var="article">
-			<a href='<c:url value="/article/view_article.do?id=${article.id }"/>'>${article.title }<br/></a>
-		</c:forEach>
+	<div class="pageWrap">
+		<div class="mainContent mt10 fix">
+			<div class="homeArcList colLeft borderBox l per55"  style="float: left; width: 400px">
+				<div class="Box">
+			 		<h2 class="BoxTitle">java文章列表:</h2>
+			 			<ul>
+							<c:forEach items="${articles }" var="article">
+								<li id="post-845" class="BoxInner">
+									<h3><a href='<c:url value="/article/view_article.do?id=${article.id }"/>'>${article.title }</a></h3>
+									<div class="arcMeta">
+										<time class="metaItem">2014.02.22</time>
+									</div>
+									<p>${article.body }</p>
+								</li>
+							</c:forEach>
+						</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 <script type="text/javascript">

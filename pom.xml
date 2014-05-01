@@ -72,7 +72,23 @@
 		</dependency>
 
 	</dependencies>
+	
 	<build>
 		<finalName>gwriter</finalName>
+		<resources>  
+            <resource>  
+                <directory>src/main/java</directory>  
+                <includes>  
+                    <include>**/*.hbm.xml</include>  
+                </includes>  
+            </resource>  
+            <resource>  
+                <directory>src/main/resources</directory>  
+                <includes>  
+                    <include>**/*.xml</include>  
+                    <include>**/*.properties</include>  
+                </includes>  
+            </resource>  
+        </resources>
 	</build>
 </project>
