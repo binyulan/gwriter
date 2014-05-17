@@ -25,7 +25,6 @@ public class ArticleController {
 	
 	@RequestMapping("/add_article_view")
 	public String addArticleView(){
-		System.out.println("aaaaaa");
 		return "/article/add_article";
 	}
 	
