@@ -70,7 +70,9 @@ public class ArticleController {
 	@RequestMapping("/add_article")
 	public String addArticle(Article article){
 		article.setDate(new Date());
-		article.setDigest(article.getBody().substring(0, 100));
+		StringBuilder sb = new StringBuilder(article.getBody());
+		sb.setLength(100);
+		article.setDigest(sb.toString());
 		articleService.saveArticle(article);
 		return "redirect:/article/article_list.do";
 	}
