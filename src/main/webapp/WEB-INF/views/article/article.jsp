@@ -39,7 +39,7 @@
 		<div id="body">${article.body}</div>
 	</div>
 	<div>
-		评论：
+		<div style="background-color: blue;">评论：</div>
 		<div id="comments">
 			<c:forEach var="comment" items="${article.comments}">
 				<div name="comment">
