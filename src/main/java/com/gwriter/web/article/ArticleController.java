@@ -2,6 +2,11 @@ package com.gwriter.web.article;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.gwriter.domain.article.Article;
+import com.gwriter.domain.article.ArticleType;
 import com.gwriter.domain.article.Comment;
 import com.gwriter.service.article.ArticleService;
 
@@ -31,7 +37,24 @@ public class ArticleController {
 	@RequestMapping("/article_list")
 	public ModelAndView viewArticleList(){
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("articles", articleService.getList());
+		List<Article> articles = articleService.getList();
+		List<Article> javaArticle = new ArrayList<Article>();
+		List<Article> designPattenArticle = new ArrayList<Article>();
+		for(Article article : articles){
+			switch (article.getType()) {
+				case JAVA :
+					javaArticle.add(article);
+					break;
+				case DESIGN_PATTERN :
+					designPattenArticle.add(article);
+					break;
+				default:
+					javaArticle.add(article);
+					break;
+			}
+		}
+		mav.addObject(ArticleType.JAVA.name(), javaArticle);
+		mav.addObject(ArticleType.DESIGN_PATTERN.name(), designPattenArticle);
 		mav.setViewName("/article/article_list");
 		return mav;
 	}
@@ -46,6 +69,8 @@ public class ArticleController {
 
 	@RequestMapping("/add_article")
 	public String addArticle(Article article){
+		article.setDate(new Date());
+		article.setDigest(article.getBody().substring(0, 100));
 		articleService.saveArticle(article);
 		return "redirect:/article/article_list.do";
 	}

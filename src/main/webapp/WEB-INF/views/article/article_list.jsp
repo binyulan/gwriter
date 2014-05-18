@@ -1,3 +1,4 @@
+<%@page import="com.gwriter.domain.article.ArticleType"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -31,7 +32,7 @@
 					action="#">
 					<div class="input-append">
 						<input type="text" name="search_text" class="search-query">
-						<button class="btn" type="submit" onclick="alert('功能暂未启用，等我学完lucene再添加')">Search</button>
+						<button class="btn" type="submit" onclick="alert('功能暂未启用，等我学完lucene再添加');return false;">Search</button>
 					</div>
 				</form>
 			</div>
@@ -42,18 +43,34 @@
 		<div class="mainContent mt10 fix">
 			<div class="homeArcList colLeft borderBox l per55"  style="float: left; width: 400px">
 				<div class="Box">
-			 		<h2 class="BoxTitle">java文章列表:</h2>
-			 			<ul>
-							<c:forEach items="${articles }" var="article">
-								<li id="post-845" class="BoxInner">
-									<h3><a href='<c:url value="/article/view_article.do?id=${article.id }"/>'>${article.title }</a></h3>
-									<div class="arcMeta">
-										<time class="metaItem">2014.02.22</time>
-									</div>
-									<p>${article.body }</p>
-								</li>
-							</c:forEach>
-						</ul>
+			 		<h2 class="BoxTitle"><%=ArticleType.JAVA.getDesc() %></h2>
+		 			<ul>
+						<c:forEach items="${JAVA}" var="article">
+							<li id="post-845" class="BoxInner">
+								<h3><a href='<c:url value="/article/view_article.do?id=${article.id }"/>'>${article.title }</a></h3>
+								<div class="arcMeta">
+									<time class="metaItem">${article.keyWords } -- ${article.date }</time>
+								</div>
+								<p>${article.digest }</p>
+							</li>
+						</c:forEach>
+					</ul>
+				</div>
+			</div>
+			<div class="homeArcList colLeft borderBox l per55"  style="float: left; width: 400px">
+				<div class="Box">
+			 		<h2 class="BoxTitle"><%=ArticleType.DESIGN_PATTERN.getDesc()%></h2>
+		 			<ul>
+						<c:forEach items="${DESIGN_PATTERN }" var="article">
+							<li id="post-845" class="BoxInner">
+								<h3><a href='<c:url value="/article/view_article.do?id=${article.id }"/>'>${article.title }</a></h3>
+								<div class="arcMeta">
+									<time class="metaItem">${article.keyWords } -- ${article.date }</time>
+								</div>
+								<p>${article.digest }</p>
+							</li>
+						</c:forEach>
+					</ul>
 				</div>
 			</div>
 		</div>

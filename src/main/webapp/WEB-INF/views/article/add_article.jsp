@@ -13,6 +13,11 @@
 		标题：<input name="title" type="text" ><br>
 		<textarea name="body" rows="10" cols="20"></textarea><br>
 		<script type="text/javascript">CKEDITOR.replace('body');</script>
+		关键词：<input type="text" name="keyWords"><br>
+		<select name="type">
+			<option value="0">java</option>
+			<option value="1">设计模式</option>
+		</select><br>
 		<input type="submit" value="提交">
 	</form>
 </body>

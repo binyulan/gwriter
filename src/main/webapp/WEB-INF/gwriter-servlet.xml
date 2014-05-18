@@ -13,4 +13,14 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:order="100" p:viewClass="org.springframework.web.servlet.view.JstlView"
 		p:prefix="/WEB-INF/views/" p:suffix=".jsp" />
+		
+	<mvc:annotation-driven conversion-service="enumConversion"/>
+	<bean id="enumConversion" 
+		  class="org.springframework.context.support.ConversionServiceFactoryBean">
+		  <property name="converters">
+		  	<list>
+		  		<bean class="com.gwriter.domain.String2EnumConverter"></bean>
+		  	</list>
+		  </property>
+	</bean>
 </beans>

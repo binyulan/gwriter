@@ -6,11 +6,20 @@
 		<id name="id">
 			<generator class="native" />
 		</id>
-		<property name="title"/>
-		<property name="body" type="text"/>
+		<property name="title" />
+		<property name="body" type="text" />
+		<property name="keyWords" type="string" />
+		<property name="date" type="date" />
+		<property name="digest" type="string"></property>
+		<property name="type">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.gwriter.domain.article.ArticleType</param>
+				<param name="type">4</param> 
+			</type>
+		</property>
 		<set name="comments" order-by="id desc">
 			<key column="article_id"></key>
-			<one-to-many class="com.gwriter.domain.article.Comment"/>
+			<one-to-many class="com.gwriter.domain.article.Comment" />
 		</set>
 	</class>
 </hibernate-mapping>
