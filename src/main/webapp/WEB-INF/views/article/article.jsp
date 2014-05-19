@@ -31,6 +31,8 @@
 	
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="${article.keyWords }" name="Keywords">
+<meta content="${article.title },${article.digest }" name="Description">
 <title>文章</title>
 </head>
 <body>

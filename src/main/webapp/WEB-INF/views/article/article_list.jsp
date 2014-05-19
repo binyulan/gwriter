@@ -16,7 +16,9 @@
 <link href="<%=request.getContextPath() %>/js/menu/menu.css" rel="stylesheet" type="text/css" />
 <link href="<%=request.getContextPath() %>/css/header/style.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>文章列表</title>
+<meta content="gwriter,java,javascript,设计模式,java框架,数据结构和算法,eclipse,开源代码" name="Keywords">
+<meta content="www.gwriter.cn是一个个人博客，会经常更新一些个人技术文章，关于java，javascript，数据结构和算法。" name="Description">
+<title>gwriter</title>
 </head>
 <body style="margin: 0; padding: 0">
 	<div id="header" style="border-bottom: 0">
